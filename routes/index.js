@@ -1,7 +1,7 @@
 const express = require('express');
 
-const speakersRoute = require('./speakers');
-const feedbackRoute = require('./feedback');
+const museoRoute = require('./museo');
+const contactoRoute = require('./contacto');
 
 const router = express.Router();
 
@@ -10,21 +10,21 @@ module.exports = (params) => {
 
   router.get('/', async (request, response, next) => {
     try {
-      const artwork = await speakersService.getAllArtwork();
-      const topSpeakers = await speakersService.getList();
+      const cuadro = await museoService.getAllcuadro();
+      const topMuseo = await museoService.getList();
       return response.render('layout', {
-        pageTitle: 'Welcome',
+        pageTitle: 'Bienvenido',
         template: 'index',
-        topSpeakers,
-        artwork,
+        topMuseo,
+        cuadro,
       });
     } catch (err) {
       return next(err);
     }
   });
 
-  router.use('/speakers', speakersRoute(params));
-  router.use('/feedback', feedbackRoute(params));
+  router.use('/museo', museoRoute(params));
+  router.use('/contacto', contactoRoute(params));
 
   return router;
 };
