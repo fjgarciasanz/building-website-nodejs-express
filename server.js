@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, './static')));
 
 app.use(async (request, response, next) => {
   try {
-    const names = await museoService.getNames();
+    const nombre = await museoService.getNombre();
     response.locals.museonombre = nombre;
     return next();
   } catch (err) {

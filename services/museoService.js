@@ -9,7 +9,7 @@ const readFile = util.promisify(fs.readFile);
 /**
  * Logic for fetching speakers information
  */
-class SpeakerService {
+class museoService {
   /**
    * Constructor
    * @param {*} datafile Path to a JSOn file that contains the speakers data
@@ -21,31 +21,31 @@ class SpeakerService {
   /**
    * Returns a list of speakers name and short name
    */
-  async getNames() {
+  async getNombre() {
     const data = await this.getData();
 
     // We are using map() to transform the array we get into another one
-    return data.map(speaker => {
-      return { name: speaker.name, shortname: speaker.shortname };
+    return data.map(museo => {
+      return { nombre: museo.nombre, cortoname: museo.cortoname };
     });
   }
 
   /**
    * Get all artwork
    */
-  async getAllArtwork() {
+  async getAllcuadro() {
     const data = await this.getData();
 
     // Array.reduce() is used to traverse all speakers and
     // create an array that contains all artwork
-    const artwork = data.reduce((acc, elm) => {
+    const museo = data.reduce((acc, elm) => {
       if (elm.artwork) {
         // eslint-disable-next-line no-param-reassign
         acc = [...acc, ...elm.artwork];
       }
       return acc;
     }, []);
-    return artwork;
+    return museo;
   }
 
   /**
@@ -117,4 +117,4 @@ class SpeakerService {
   }
 }
 
-module.exports = SpeakerService;
+module.exports = museoService;

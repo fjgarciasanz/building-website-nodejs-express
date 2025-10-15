@@ -6,7 +6,7 @@ const contactoRoute = require('./contacto');
 const router = express.Router();
 
 module.exports = (params) => {
-  const { speakersService } = params;
+  const { museoService } = params;
 
   router.get('/', async (request, response, next) => {
     try {
