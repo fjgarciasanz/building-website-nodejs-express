@@ -15,7 +15,7 @@ const routes = require('./routes');
 
 const app = express();
 
-app.locals.siteName = 'ROUX Academy';
+app.locals.siteName = 'Museo';
 
 const port = 3000;
 
@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
-app.locals.siteName = 'ROUX Meetups';
+app.locals.siteName = 'Museo';
 
 app.use(express.static(path.join(__dirname, './static')));
 

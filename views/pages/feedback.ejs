@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4">
       <div class="maincontent">
-        <h1>Send us feedback</h1>
+        <h1>Envia tus Comentarios</h1>
 
         <div class="feedback-status">
           <% if(locals.errors) {%>
@@ -21,7 +21,7 @@
 
           <form class="feedback-form" method="post" action="/feedback">
             <div class="form-group">
-              <label for="feedback-form-name">Name</label>
+              <label for="feedback-form-name">Nombre</label>
               <input
                 type="text"
                 class="form-control"
@@ -41,7 +41,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="feedback-form-title">Title</label>
+              <label for="feedback-form-title">Titulo</label>
               <input
                 type="text"
                 class="form-control"
@@ -51,7 +51,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="feedback-form-message">Message</label>
+              <label for="feedback-form-message">Mensaje</label>
               <textarea
                 type="text"
                 placeholder="Enter your message, then hit the submit button"
@@ -61,13 +61,13 @@
                 rows="6"
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary float-right">Submit</button>
+            <button type="submit" class="btn btn-secondary float-right">Enviar</button>
           </form>
         </div>
       </div>
       <aside class="col-md-8">
         <div class="maincontent feedback">
-          <h1>Recent Feedback</h1>
+          <h1>Comentarios recientes</h1>
 
           <div class="feedback-items">
             <% feedback.forEach(function (item) { %>
