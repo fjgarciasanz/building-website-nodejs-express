@@ -1,8 +1,6 @@
 const express = require('express');
 
-const speakersRoute = require('./speakers');
-const feedbackRoute = require('./feedback');
-const acercaRoute = require('./acerca')
+
 const router = express.Router();
 
 module.exports = (params) => {
@@ -13,8 +11,8 @@ module.exports = (params) => {
       const artwork = await speakersService.getAllArtwork();
       const topSpeakers = await speakersService.getList();
       return response.render('layout', {
-        pageTitle: 'Welcome',
-        template: 'index',
+        pageTitle: 'Acerca de',
+        template: 'acerca',
         topSpeakers,
         artwork,
       });
@@ -23,9 +21,6 @@ module.exports = (params) => {
     }
   });
 
-  router.use('/speakers', speakersRoute(params));
-  router.use('/feedback', feedbackRoute(params));
-  router.use('/acerca', acercaRoute(params));
 
   return router;
 };
