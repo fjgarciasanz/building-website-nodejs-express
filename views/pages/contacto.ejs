@@ -1,29 +1,43 @@
 <div class="container mt-5">
-  <h1>Contacto</h1>
-  <p>Rellena el formulario para ponerte en contacto con nosotros.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Contacto</h2>
+            <p>Rellena el formulario para ponerte en contacto con nosotros.</p>
 
-    <% if (mensajeExito) { %>
-    <div class="alert alert-success" role="alert">
-      <%= mensajeExito %>
-    </div>
-  <% } %>
-  
-  <form action="/contacto" method="POST">
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" required>
-    </div>
+            <% if (mensajeExito) { %>
+            <div class="alert alert-success" role="alert">
+                <%= mensajeExito %>
+            </div>
+            <% } %>
 
-    <div class="mb-3">
-      <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
+            <form action="/contacto" method="POST">
+                 <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
 
-    <div class="mb-3">
-      <label for="mensaje" class="form-label">Mensaje</label>
-      <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-    </div>
+                 <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+        </div>
+            <div class="col-md-6">
+      <h2>Información del Museo del Prado</h2>
+      <p><strong>Dirección:</strong> Calle Ruiz de Alarcón, 23, 28014 Madrid, España</p>
+      <p><strong>Teléfono:</strong> +34 913 30 28 00</p>
+      <p><strong>Email:</strong> info@museodelprado.es</p>
+      <p><strong>Horario:</strong> Lunes a sábado 10:00 – 20:00, Domingo 10:00 – 19:00</p>
+      <p><strong>Visita guiada:</strong> Disponible con reserva previa</p>
+
+      
+    </div>
+    </div>
 </div>
