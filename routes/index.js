@@ -27,7 +27,7 @@ module.exports = (params) => {
   router.use('/speakers', speakersRoute(params));
   router.use('/feedback', feedbackRoute(params));
   router.use('/acerca', acercaRoute(params));
-  router.use('./contacto',contactoRoute(params));
+  router.use('/contacto',contactoRoute(params));
 
   return router;
 };

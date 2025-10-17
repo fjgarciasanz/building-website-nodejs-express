@@ -2,7 +2,13 @@
   <h1>Contacto</h1>
   <p>Rellena el formulario para ponerte en contacto con nosotros.</p>
 
-  <form action="/feedback" method="POST">
+    <% if (mensajeExito) { %>
+    <div class="alert alert-success" role="alert">
+      <%= mensajeExito %>
+    </div>
+  <% } %>
+  
+  <form action="/contacto" method="POST">
     <div class="mb-3">
       <label for="nombre" class="form-label">Nombre</label>
       <input type="text" class="form-control" id="nombre" name="nombre" required>
